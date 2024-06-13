@@ -1,147 +1,7 @@
 $(document).ready(function () {
-    // Initial display of the first .bottom element
-    $('.bottom').first().addClass('active');
-    
-    // Toggle corresponding .bottom element when .more-title is clicked
-    $('.more-title').click(function () {
-        var $nextBottom = $(this).next('.bottom');
-        
-        // Hide all .bottom elements except the current one
-        $('.bottom').not($nextBottom).removeClass('active');
-    
-        // Toggle the display state of the current .bottom element
-        $nextBottom.toggleClass('active');
-    });
 
-    // Navigation bar hover effect
-    $('#main-nav a').on({
-        mouseover: function () {
-            $(this).css("color", "#42c5ed");
-        },
-        mouseout: function () {
-            $(this).css("color", "rgb(255, 255, 255)");
-        }
-    });
 
-    // Button hover effects
-    $(".btn").hover(
-        function () {
-            $(this).find("span:nth-child(1)").css({
-                height: "100%",
-                transition: "height 1.5s ease"
-            });
-            $(this).find("span:nth-child(2)").css({
-                width: "100%",
-                transition: "width 1.5s ease"
-            });
-            $(this).find("span:nth-child(3)").css({
-                height: "100%",
-                transition: "height 1.5s ease"
-            });
-            $(this).find("span:nth-child(4)").css({
-                width: "100%",
-                transition: "width 1.5s ease"
-            });
-        },
-        function () {
-            $(this).find("span:nth-child(1)").css({
-                height: "0",
-                transition: "height 1.5s ease"
-            });
-            $(this).find("span:nth-child(2)").css({
-                width: "0",
-                transition: "width 1.5s ease"
-            });
-            $(this).find("span:nth-child(3)").css({
-                height: "0",
-                transition: "height 1.5s ease"
-            });
-            $(this).find("span:nth-child(4)").css({
-                width: "0",
-                transition: "width 1.5s ease"
-            });
-        }
-    );
-
-    // Button click effects
-    $('#fa-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': Vivy -Fluorite Eyes Song-', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': Vivy -Fluorite Eyes Song-');
-        }
-    });
-
-    $('#fso-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': Official髭男dism - Cry Baby', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': Official髭男dism - Cry Baby');
-        }
-    });
-
-    $('#fms-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': 流行搖滾', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': 流行搖滾');
-        }
-    });
-
-    $('#fama-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': Vivy中的配角グレイス(葛蕾絲)', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': Vivy中的配角グレイス(葛蕾絲)');
-        }
-    });
-
-    $('#fiv-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': 玩遊戲', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': 玩遊戲');
-        }
-    });
-
-    $('#fsp-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': 打保齡球', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': 打保齡球');
-        }
-    });
-
-    $('#fla-btn').click(function (event) {
-        event.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': 硬要講是C++,比較好懂', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': 硬要講是C++,比較好懂');
-        }
-    });
-
-    // Hamburger menu functionality
+    // 漢堡菜單相關
     $('.hamburger-menu').click(function () {
         $('.fullscreen-menu').toggleClass('display_nav');
         $('div:not(.fullscreen-menu,.hamburger-menu,.line)').toggleClass('blur');
@@ -153,28 +13,27 @@ $(document).ready(function () {
         $('div:not(.fullscreen-menu,.hamburger-menu,.line)').toggleClass('blur');
     });
 
-    // Page navigation
-    const links = $('.nav-link');
-    const pages = $('.page');
 
-    function showPage(hash) {
-        pages.each(function () {
-            if ('#' + $(this).attr('id') === hash) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
+
+    //按下按鈕出現的內容
+    const info = [
+        { image: 'images/Vivy.jpg', text: 'Vivy -Fluorite Eyes Song-,AI歌姬「Vivy」透過修正歷史來拯救世界的故事'},
+        { image: 'images/majohn.png', text: '打麻將,比起台灣麻將更喜歡日本麻將,比較有在動腦子的感覺' },
+        { image: 'images/bowling.jpg', text: '我喜歡打保齡球,每局分數都可以達到150分左右,主要打飛碟球' },
+        { image: 'images/starrail.png', text: '非常好遊戲,崩壞:星穹鐵道,回合制,最喜歡這種會保底的遊戲了^_^' },
+        { image: 'images/singer.jpg', text: '目前喜歡的樂團是日本的髭男,鬍子男,風格是流行搖滾' }
+    ];
+
+
+    //按鈕動畫
+    $('.btn').click(function () {
+        const index = $(this).index();
+        const selectedInfo = info[index];
+
+        $('#info-display').fadeOut(function () {
+            $('#info-image').attr('src', selectedInfo.image);
+            $('#info-text').text(selectedInfo.text);
+            $('#info-display').fadeIn();
         });
-    }
-
-    links.on('click', function (event) {
-        event.preventDefault();
-        const hash = $(this).attr('href');
-        window.location.hash = hash;
-        showPage(hash);
     });
-
-    // Initial display of the page
-    const currentHash = window.location.hash || '#home';
-    showPage(currentHash);
 });

@@ -1,39 +1,38 @@
-.font{
+.font {
     font-family: "Chocolate Classical Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-weight: bold;
     color: aliceblue;
-  }
-        /* 字型設計＾*/
-*{
-    /*   border: solid 1px; */
-      vertical-align:top;
-      font-family:Arial;
-      text-align: center;
-      position:relative;
-      letter-spacing: 7px;
-      background-color:#b3a4d6;
 }
-.sma-div{
+
+* {
+    vertical-align: top;
+    font-family: Arial;
+    text-align: center;
+    position: relative;
+    letter-spacing: 7px;
+    background-color: gray;
+}
+.sma-div {
     background-color: rgba(255, 255, 255, 0);
     margin-top: 30px;
-  }
-footer{
-    margin-top: 20px;
-    background-color:#dfd1a5;
-    color: #ffffff;
+}
+
+footer {
+    background-color: #dfd1a5;
+    color: #000000;
     font-weight: bold;
     text-align: center;
     padding: 14px 10px 20px;
+    margin-top: auto;
 }
-footer p{
-  background-color: #ffffff00;
+footer p {
+    background-color: #ffffff00;
 }
-footer p small{
-  background-color: #ffffff00;
+footer p small {
+    background-color: #ffffff00;
 }
-
 header {
     padding: 10px 0;
     text-align: center;
@@ -42,134 +41,42 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-
     display: flex;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
-.main-title{
+.main-title {
     margin-top: 25px;
     margin-left: 5%;
 }
-.bar-div{
-    display: flex;
-}       
-.main-nav{
-    list-style-type: none;   
-    display:flex;
-    padding-top: 8%;
-    margin-right: 50px;
-    margin-top: 25px;
-}
-.main-div{
-    margin-right: 70px;
-}
-.main-nav li{
-    margin-left: 36px;
-    margin-top: 35px;
-}
-.main-nav a{
-    text-decoration: none;
-    font-weight:bold;
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-}
-.acc-div{
+.acc-div {
     background-color: rgba(255, 255, 255, 0);
     margin-top: 170px;
-
 }
-
-html,body{
-    margin:0px;
-    padding:0px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
-.title{
-    margin-left:auto;
-    margin-right:auto;
-    left:0px;
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     height: 120px;
-    background-color:#dfd1a5;
+    background-color: #dfd1a5;
     text-align: center;
 }
-.title h2{
-    display:inline-block;
-    height:30px;
-    font-size:40px;
-    font-weight:bold;
-    letter-spacing: 2px;
-    background-color:#00000000;
-    color: white;
-  }
-.more-title{
-    font-size:30px;
-    font-weight:bold;
-    padding: 20px;
-}
-.more-title:hover{
-    color: #6ea9ec;
-}
-.more-title-ch{
-    font-size:25px;
-    font-weight:900;
-    padding: 20px;
-}
-.bottom{
-    height:300px;
-    width: 700px;
-    margin-left:auto;
-    margin-right:auto;
-    display: flex;
-}
-.left, .right{
+.title h2 {
     display: inline-block;
-    /* weight:50%; */
-    height:100px;
-    box-sizing: border-box;
-}
-.left{
-    height:100%;
-    width:50%;
-    margin-left:0px;
-}
-.right{
-    height:100%;
-    width:50%;
-    margin-left:0px;
-    margin-top: 5%;
-}
-.right .more-title{
-    padding: -20px;
-    font-size: 25px;
+    height: 30px;
+    font-size: 40px;
+    font-weight: bold;
     letter-spacing: 2px;
-    border-bottom: solid 2px rgb(0, 0, 0);
-}
-.right .txt{
-    font-size: 15px;
-    letter-spacing: 1.5px;
-    font-weight:bold;
-
-}
-.photo{
-    box-sizing: border-box;
-  }
-.photo img{
-    height:200px;
-    border-radius:50%;
-    margin: 30px;
-}
-/* 單檔多頁 */
-.page {
-    display: none;
-    padding: 20px;
-    width: 100%;
-    margin-top: 20px;
+    background-color: #00000000;
+    color: rgb(0, 0, 0);
 }
 
-.page.active {
-    display: block;
-}
-/* 單檔多頁 */
-/* 漢堡圖標樣式 */
 .hamburger-menu {
     position: fixed;
     height: 65px;
@@ -181,29 +88,26 @@ html,body{
     display: block;
     z-index: 4500;
 }
-
 .line {
     width: 60%;
     justify-content: center;
     height: 5%;
     margin-top: 15%;
     background-color: rgb(255, 252, 252);
-  }
-
-  .fullscreen-menu {
+}
+.fullscreen-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /*#6b6969*/
     color: rgb(255, 252, 252);
     display: none;
     z-index: 90000;
     opacity: 0.7;
-    /*半透明*/
-  }
-  .fullscreen-menu ul {
+
+}
+.fullscreen-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -213,99 +117,57 @@ html,body{
     justify-content: center;
     height: 100%;
     text-align: center;
-  }
-
-  .fullscreen-menu ul li {
+}
+.fullscreen-menu ul li {
     margin-bottom: 20px;
     font-style: normal;
     border-bottom-style: solid;
     border-width: 0.5px;
     padding-bottom: 7px;
-  }
-
-  .fullscreen-menu ul li a {
+}
+.fullscreen-menu ul li a {
     color: rgb(255, 252, 252);
     text-decoration: none;
     font-size: 24px;
     text-align: center;
     letter-spacing: 5px;
     font-weight: 400;
-    padding-bottom:100px; 
-  }
-
-  .fullscreen-menu ul li a:hover {
+    padding-bottom: 100px;
+}
+.fullscreen-menu ul li a:hover {
     color: rgb(103, 205, 186);
-  }
+}
 
-  /*透過按鈕的JS觸發添加/刪除在nav上的類別*/
-  .display_nav {
+.display_nav {
     display: block;
-  }
-
-  .blur {
+}
+.blur {
     filter: blur(10px);
-  }
-  /* btn */
+}
+
 .btn {
     position: relative;
-    min-width: 600px;
-    border: 0px solid #FFFFFF;
+    min-width: 200px;
+    border: 2px solid #FFFFFF;
     color: #000000;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
     padding: 10px 20px;
-    display: inline-block; /* 使按鈕內容能夠正常顯示 */
-    overflow: hidden; /* 確保動畫效果不會超出按鈕範圍 */
+    margin: 10px;
+    background-color: #dfd1a5;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #b3a4d6;
+    color: #fff;
 }
 
-.btn span {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #FFFFFF;
-}
-
-.btn span:nth-child(1) {
-    width: 1px;
-    height: 0;
-    left: 0;
-    bottom: 0;
-}
-
-.btn span:nth-child(2) {
-    height: 1px;
-    width: 0;
-    left: 0;
-    top: 0;
-}
-
-.btn span:nth-child(3) {
-    width: 1px;
-    height: 0;
-    right: 0;
-    top: 0;
-
-}
-
-.btn span:nth-child(4) {
-    height: 1px;
-    width: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.bottom {
-    display: none; /* 初始化為隱藏 */
-}
-.bottom.active {
-    display: flex; /* 顯示為 flex 布局 */
-}
-.more-title, .more-title-ch {
-    cursor: pointer; /* 添加光標效果，表示可點擊 */
-    margin: 20px 0;
-    font-size: 20px;
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
